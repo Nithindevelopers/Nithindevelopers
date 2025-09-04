@@ -1,27 +1,60 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Nithin Developers</title><link rel='stylesheet' href='style.css'></head><body>
-<header>
-  <div class="header-container">
-    <img src="images/logo.png" alt="Nithin Developers Logo" class="logo">
-    <div class="title-text">
-      <h1>Nithin Developers</h1>
-      <p>Materials to Masterpiece</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact - Nithin Developers</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header-banner" role="banner" aria-label="Header banner">
+    <div class="header-inner">
+      <img src="images/logo.png" alt="Nithin Developers logo" class="logo">
+      <div>
+        <h1 class="site-title">Nithin Developers</h1>
+        <p class="site-sub">Materials to Masterpieces</p>
+      </div>
     </div>
+  </header>
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <main class="container" role="main">
+    <section class='hero-small'><h2>Contact Us</h2><p>Ready to start your project? Reach out for a quote or consultation.</p></section>
+    
+<section>
+  <div class="card">
+    <h3>Get in touch</h3>
+    <p>Email: <a href="mailto:nb@nithindevelopers.com">nb@nithindevelopers.com</a></p>
+    <p>Phone: <a href="tel:+919884506639">+91-9884506639</a></p>
+    <p>WhatsApp: <a href="https://wa.me/919884506639" target="_blank">Chat on WhatsApp</a></p>
   </div>
-</header>
+  <div style="margin-top:20px" class="card">
+    <form action="#" method="post">
+      <label for="name">Name</label><br><input id="name" name="name" required style="width:100%;padding:10px;margin-top:6px;border-radius:6px;border:1px solid #ddd"><br>
+      <label for="email" style="margin-top:8px">Email</label><br><input id="email" name="email" type="email" required style="width:100%;padding:10px;margin-top:6px;border-radius:6px;border:1px solid #ddd"><br>
+      <label for="phone" style="margin-top:8px">Phone</label><br><input id="phone" name="phone" required style="width:100%;padding:10px;margin-top:6px;border-radius:6px;border:1px solid #ddd"><br>
+      <label for="message" style="margin-top:8px">Message</label><br><textarea id="message" name="message" rows="5" style="width:100%;padding:10px;margin-top:6px;border-radius:6px;border:1px solid #ddd"></textarea><br>
+      <button type="submit" class="btn" style="margin-top:12px">Send Message</button>
+    </form>
+  </div>
+</section>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="services.html">Services</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
-<section><h2>Contact Us</h2><p>Email: nb@nithindevelopers.com</p><p>Phone: +91-9884506639 | +91-9962366438</p><p>WhatsApp: +91-9884506639</p><a href='mailto:nb@nithindevelopers.com' class='btn'>Send an Email</a> <a href='https://wa.me/919884506639' class='btn'>Chat on WhatsApp</a></section>
-<!-- Floating Contact Buttons -->
-<a href="mailto:nb@nithindevelopers.com" class="email-float" target="_blank">📧</a>
-<a href="https://wa.me/919884506639" class="whatsapp-float" target="_blank">💬</a>
-
-<footer>
-  <p>&copy; 2025 Nithin Developers. All Rights Reserved.</p>
-</footer>
-</body></html>
+  </main>
+  <div class="contact-float" aria-hidden="false">
+    <a href="mailto:nb@nithindevelopers.com" title="Email us"><img src="images/logo.png" alt="email icon" style="width:24px;height:24px;border-radius:4px"></a>
+    <a href="https://wa.me/919884506639" title="Chat on WhatsApp"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+  </div>
+  <footer role="contentinfo">
+    <p>&copy; 2025 Nithin Developers. All Rights Reserved.</p>
+    <p><a href="mailto:nb@nithindevelopers.com" style="color:var(--silver);text-decoration:underline">nb@nithindevelopers.com</a> | +91-9884506639</p>
+  </footer>
+</body>
+</html>
