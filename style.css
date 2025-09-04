@@ -2,8 +2,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: #fff;      /* White background for all pages */
-  color: #333;           /* Dark text for readability */
+  background: #fff;           /* Main background is white */
+  color: #222;                /* Slightly darker text for readability */
 }
 
 header {
@@ -11,7 +11,7 @@ header {
   background-size: cover;
   padding: 20px;
   text-align: center;
-  border-bottom: 2px solid #4169e1; /* Royal blue accent */
+  border-bottom: 2px solid #222; /* Accent is dark now */
   position: relative;
   z-index: 1;
 }
@@ -28,36 +28,44 @@ header {
   width: auto;
 }
 
-/* Header text styling for visibility over image */
+/* Header text styling for bold, uppercase, and visibility over the image */
 header h1 {
   margin: 0;
-  font-size: 2em;
-  color: #fff;
-  text-shadow: 1px 1px 6px #4169e1;
+  font-size: 2.4em;
+  font-weight: bold;           /* Bold */
+  text-transform: uppercase;   /* Ensure uppercase */
+  color: #222;                 /* Dark color for the accent */
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 8px #fff; /* Subtle shadow for contrast if needed */
 }
 
 header p {
   margin: 5px 0 0;
   font-size: 1.2em;
-  color: #fff;
-  text-shadow: 1px 1px 6px #4169e1;
+  color: #222;                  /* Dark color for subtitle */
+  font-weight: bold;
+  background: rgba(255,255,255,0.7); /* Optionally add semi-transparent background for readability */
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
 nav {
   display: flex;
   justify-content: center;
-  background: #000;          /* Black navbar for contrast */
+  background: #000;             /* Dark nav bar */
 }
 
 nav a {
-  color: #f5f5f5;
+  color: #fff;
   padding: 14px 20px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
-  background: #4169e1;       /* Royal blue hover */
-  color: #000;
+  background: #222;             /* Dark accent on hover */
+  color: #fff;
 }
 
 section {
@@ -69,7 +77,9 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #4169e1;            /* Royal blue headings */
+  color: #222;                  /* Dark accent heading */
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .services {
@@ -79,21 +89,23 @@ h2 {
 }
 
 .service {
-  background: #fff;          /* White boxes for services */
+  background: #fff;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  color: #333;               /* Dark text for clarity */
-  border: 1px solid #4169e1; /* Royal blue border */
+  color: #222;                  /* Dark text for clarity */
+  border: 1px solid #222;       /* Dark border */
+  font-weight: bold;
 }
 
 footer {
-  background: #1a1a1a;       /* Dark footer background */
+  background: #222;             /* Dark footer */
   color: #fff;
   text-align: center;
   padding: 20px;
   margin-top: 20px;
-  border-top: 2px solid #4169e1;   /* Royal blue border */
+  border-top: 2px solid #222;   /* Dark accent border */
+  font-weight: bold;
 }
 
 /* Floating Contact Buttons */
@@ -101,8 +113,8 @@ footer {
   position: fixed;
   width: 55px;
   height: 55px;
-  background-color: #4169e1; /* Royal blue buttons */
-  color: #1e1e1e;
+  background-color: #222;       /* Dark accent color */
+  color: #fff;                  /* White icon/text */
   border-radius: 50%;
   text-align: center;
   font-size: 26px;
@@ -116,6 +128,6 @@ footer {
 .whatsapp-float { bottom: 20px; right: 20px; }
 
 .email-float:hover, .whatsapp-float:hover {
-  background-color: #27408b; /* Darker royal blue on hover */
+  background-color: #444;       /* Slightly lighter dark on hover */
   transform: scale(1.1);
 }
