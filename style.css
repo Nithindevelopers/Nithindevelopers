@@ -11,7 +11,7 @@ header {
   background-size: cover;
   padding: 20px;
   text-align: center;
-  border-bottom: 2px solid #222; /* Accent is dark now */
+  border-bottom: 2px solid #02082d; /* Accent is dark now */
   position: relative;
   z-index: 1;
 }
