@@ -1,56 +1,29 @@
 
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services - Nithin Developers</title>
-<link rel="stylesheet" href="style.css"></head><body>
-
-<header id="top" class="fade-in">
-  <a href="index.html"><img src="images/header.jpg" alt="Header Banner" class="header-img"></a>
-</header>
-
-<nav class="fade-in">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="services.html">Services</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card"><h3>Material Outsourcing</h3><p>We source high-quality construction materials at competitive prices.</p></div>
-    <div class="card"><h3>End-to-End Solutions</h3><p>From concept to completion, we manage your project seamlessly.</p></div>
-    <div class="card"><h3>Interior & Renovation</h3><p>Transform spaces with modern interiors and expert craftsmanship.</p></div>
-    <div class="card"><h3>Consultation & Planning</h3><p>Plan budgets, materials, and timelines with expert guidance.</p></div>
-  </div>
-  <img src="images/services.jpg" alt="Services Overview" style="width:100%; border-radius:8px; margin-top:20px;">
-</section>
-
-<footer class="fade-in">
-  <p>&copy; 2025 Nithin Developers. All Rights Reserved.</p>
-</footer>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919884506639" class="whatsapp-float" target="_blank">
-  <img src="images/whatsapp.png" alt="WhatsApp">
-</a>
-
-<!-- Back to Top Button -->
-<button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
-
-<script>
-let topBtn = document.getElementById("topBtn");
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-};
-function topFunction() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
-}
-</script>
-
-</body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services - Nithin Developers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Our Services</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container fade-in">
+        <h2>What We Offer</h2>
+        <p>We provide end-to-end services tailored to meet the diverse needs of our clients in the construction sector.</p>
+        <img src="https://source.unsplash.com/800x400/?materials,construction" width="100%">
+        <ul>
+            <li><b>Material Outsourcing</b> - Tiles, electricals, plumbing, and interiors at the best rates.</li>
+            <li><b>Construction Services</b> - Residential, commercial, and industrial projects with quality assurance.</li>
+            <li><b>Project Management</b> - Planning, execution, and delivery with complete transparency.</li>
+        </ul>
+    </div>
+    <footer>&copy; 2025 Nithin Developers | All Rights Reserved</footer>
+</body>
+</html>
