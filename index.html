@@ -1,51 +1,51 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home - Nithin Developers</title>
-<link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="header-banner" role="banner" aria-label="Header banner">
-    <div class="header-inner">
-      <img src="images/logo.png" alt="Nithin Developers logo" class="logo">
-      <div>
-        <h1 class="site-title">Nithin Developers</h1>
-        <p class="site-sub">Materials to Masterpieces</p>
-      </div>
-    </div>
-  </header>
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-  <main class="container" role="main">
-    <section class='hero-small'><h2>Nithin Developers — From Materials to Masterpieces</h2><p>We combine premium materials, expert sourcing and precise execution to deliver exceptional projects.</p><p style='margin-top:12px'><a class='btn' href='contact.html'>Get Started</a> <a class='btn' href='https://wa.me/919884506639' target='_blank'>Chat on WhatsApp</a></p></section>
-    
-<section style="margin-top:20px">
-  <div class="grid">
-    <div class="card"><h3>Smart Sourcing</h3><p>Trusted suppliers and competitive pricing for high-value materials.</p></div>
-    <div class="card"><h3>Complete Delivery</h3><p>End-to-end project management from planning to handover.</p></div>
-    <div class="card"><h3>Luxury Interiors</h3><p>High-end finishes and craftsmanship for lasting beauty.</p></div>
-  </div>
-  <div style="margin-top:22px" class="card"><h2>Featured Work</h2><p>Preview of our projects and material expertise. Visit Projects page for more details.</p></div>
+
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nithin Developers - Home</title>
+<link rel="stylesheet" href="style.css"></head><body>
+
+<header id="top" class="fade-in">
+  <a href="index.html"><img src="images/header.jpg" alt="Header Banner" class="header-img"></a>
+</header>
+
+<nav class="fade-in">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+  <h1>Welcome to Nithin Developers</h1>
+  <p>We transform your vision into reality by offering expert construction material outsourcing, project management, and end-to-end building solutions. Our mission is to deliver quality, transparency, and cost efficiency for every project.</p>
+  <img src="images/home.jpg" alt="Construction Overview" style="width:100%; border-radius:8px; margin-top:20px;">
 </section>
 
-  </main>
-  <div class="contact-float" aria-hidden="false">
-    <a href="mailto:nb@nithindevelopers.com" title="Email us"><img src="images/logo.png" alt="email icon" style="width:24px;height:24px;border-radius:4px"></a>
-    <a href="https://wa.me/919884506639" title="Chat on WhatsApp"><img src="images/whatsapp.png" alt="WhatsApp"></a>
-  </div>
-  <footer role="contentinfo">
-    <p>&copy; 2025 Nithin Developers. All Rights Reserved.</p>
-    <p><a href="mailto:nb@nithindevelopers.com" style="color:var(--silver);text-decoration:underline">nb@nithindevelopers.com</a> | +91-9884506639</p>
-  </footer>
-</body>
-</html>
+<footer class="fade-in">
+  <p>&copy; 2025 Nithin Developers. All Rights Reserved.</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919884506639" class="whatsapp-float" target="_blank">
+  <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+
+<script>
+let topBtn = document.getElementById("topBtn");
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</body></html>
