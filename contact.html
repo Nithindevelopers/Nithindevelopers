@@ -1,39 +1,58 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Nithin Developers</title>
-  <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-  <header>
-    <img src="assets/images/banner.jpg" alt="Banner" class="banner">
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Get in Touch</h2>
-      <p>We are here to answer your questions and support your projects. Reach out to us via phone, email, or by filling the contact form below. Whether it's material sourcing, supply inquiries, or real estate opportunities, our team is committed to responding promptly and effectively.</p>
-      <form action="mailto:info@nithindevelopers.com" method="post" enctype="text/plain">
-        <label>Name:</label><input type="text" name="name" required><br>
-        <label>Email:</label><input type="email" name="email" required><br>
-        <label>Message:</label><textarea name="message" required></textarea><br>
-        <button type="submit">Send</button>
-      </form>
-      <p>Email: info@nithindevelopers.com | Phone: +91 98765 43210</p>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 Nithin Developers</p>
-  </footer>
-</body>
-</html>
-    
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Nithin Developers</title>
+<link rel="stylesheet" href="style.css"></head><body>
+
+<header id="top" class="fade-in">
+  <a href="index.html"><img src="images/header.jpg" alt="Header Banner" class="header-img"></a>
+</header>
+
+<nav class="fade-in">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:nb@nithindevelopers.com">nb@nithindevelopers.com</a></p>
+  <p>Phone: +91-9884506639 | +91-9962366438</p>
+  <form style="max-width:600px; margin:auto;">
+    <input type="text" placeholder="Your Name" required style="width:100%;padding:10px;margin:10px 0;">
+    <input type="email" placeholder="Your Email" required style="width:100%;padding:10px;margin:10px 0;">
+    <textarea placeholder="Your Message" required style="width:100%;padding:10px;margin:10px 0;"></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  <img src="images/contact.jpg" alt="Contact" style="width:100%; border-radius:8px; margin-top:20px;">
+</section>
+
+<footer class="fade-in">
+  <p>&copy; 2025 Nithin Developers. All Rights Reserved.</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919884506639" class="whatsapp-float" target="_blank">
+  <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+
+<script>
+let topBtn = document.getElementById("topBtn");
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</body></html>
