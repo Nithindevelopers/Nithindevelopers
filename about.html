@@ -1,36 +1,52 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Nithin Developers</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <img src="images/banner.jpeg" alt="Banner" class="banner">
-    <h1>About Nithin Developers</h1>
-  </header>
-  <main>
-    <section>
-      <p>
-        Nithin Developers was founded with a vision to redefine how people source materials, 
-        invest in properties, and build their dream projects. We provide end-to-end solutions, 
-        ensuring cost efficiency and legal clarity while maintaining high standards of construction 
-        and service delivery.
-      </p>
-      <p>
-        Our team brings together professionals with expertise in material procurement, real estate law, 
-        and modern construction techniques. By combining these strengths, we ensure that our clients 
-        enjoy a smooth journey from concept to completion. From bulk sourcing to real estate investment 
-        guidance, we stand as your reliable partner at every stage.
-      </p>
-    </section>
-  </main>
-  <footer>
-    <p>📧 contact@nithindevelopers.com | 📞 +91 98765 43210</p>
-  </footer>
-</body>
-</html>
-    
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Nithin Developers</title>
+<link rel="stylesheet" href="style.css"></head><body>
+
+<header id="top" class="fade-in">
+  <a href="index.html"><img src="images/header.jpg" alt="Header Banner" class="header-img"></a>
+</header>
+
+<nav class="fade-in">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+  <h2>About Us</h2>
+  <p>At <strong>Nithin Developers</strong>, we specialize in making construction simple and hassle-free. From sourcing premium-quality materials to managing entire projects, our team ensures excellence at every step.</p>
+  <p>Our expertise covers residential, commercial, and renovation works. With a commitment to transparency, budget-friendly planning, and timely delivery, we are your trusted partner for turning materials into masterpieces.</p>
+  <img src="images/about.jpg" alt="Team Work" style="width:100%; border-radius:8px; margin-top:20px;">
+</section>
+
+<footer class="fade-in">
+  <p>&copy; 2025 Nithin Developers. All Rights Reserved.</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919884506639" class="whatsapp-float" target="_blank">
+  <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+
+<script>
+let topBtn = document.getElementById("topBtn");
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</body></html>
