@@ -31,7 +31,6 @@ body {
   gap: 8px;
 }
 
-/* Combined Logo */
 .logo img {
   height: 45px;
   width: auto;
@@ -206,15 +205,106 @@ footer {
   color: #fff;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
+/* Responsive Header */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ============================
+   Responsive Fixes
+   ============================ */
+@media (max-width: 1024px) {
   .hero img {
-    height: 280px;
+    height: 350px;
   }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #0d1b2a;
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-links a:first-child {
+    border-top: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero img {
+    height: 250px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .service-block img,
+  .project-block img {
+    height: 200px;
+  }
+
+  .service-block h3,
+  .project-block h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-block p,
+  .project-block p {
+    font-size: 0.95rem;
+  }
+
+  .logo img {
+    height: 36px;
+  }
+
   .call-now-btn {
     display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 0 15px;
+  }
+
+  .btn-quote {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
 }
