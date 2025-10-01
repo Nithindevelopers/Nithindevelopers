@@ -1,4 +1,6 @@
-/* Reset */
+/* ============================
+   Reset & Base
+   ============================ */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,9 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* ============================
+   Header
+   ============================ */
 .site-header {
   background: #0d1b2a;
   color: #fff;
@@ -49,7 +53,9 @@ body {
   color: #ffb703;
 }
 
-/* Hero */
+/* ============================
+   Hero
+   ============================ */
 .hero {
   position: relative;
   text-align: center;
@@ -96,7 +102,9 @@ body {
   color: #fff;
 }
 
-/* Content */
+/* ============================
+   Content Base
+   ============================ */
 .content {
   max-width: 1100px;
   margin: 40px auto;
@@ -117,22 +125,154 @@ ul, ol {
   margin: 10px 0 20px 20px;
 }
 
-.service-block,
-.project-block {
-  margin-bottom: 40px;
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
 }
 
-.service-block img,
-.project-block img {
-  width: 100%;
-  max-width: 700px;
-  height: 300px;
-  object-fit: cover;
+/* ============================
+   About Section
+   ============================ */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.about-section img {
+  flex: 1;
+  max-width: 45%;
   border-radius: 8px;
+}
+
+.about-section .about-text {
+  flex: 1;
+}
+
+.about-section .about-text h2 {
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+/* ============================
+   Services Section
+   ============================ */
+.service-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.service-section img {
+  flex: 1;
+  max-width: 45%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.service-section .service-text {
+  flex: 1;
+}
+
+.service-section .service-text h3 {
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.service-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ============================
+   Projects Section
+   ============================ */
+.project-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.project-section img {
+  flex: 1;
+  max-width: 45%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.project-section .project-text {
+  flex: 1;
+}
+
+.project-section .project-text h3 {
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.project-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ============================
+   Contact Section
+   ============================ */
+.contact-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.contact-details, 
+.contact-form {
+  flex: 1;
+}
+
+.contact-details h3,
+.contact-form h3 {
+  color: #0d1b2a;
   margin-bottom: 15px;
 }
 
-/* CTA */
+.contact-details p {
+  margin-bottom: 10px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  margin-top: 15px;
+}
+
+/* ============================
+   CTA
+   ============================ */
 .cta {
   background: #0d1b2a;
   color: #fff;
@@ -150,7 +290,9 @@ ul, ol {
   margin-bottom: 20px;
 }
 
-/* Footer */
+/* ============================
+   Footer
+   ============================ */
 footer {
   background: #0d1b2a;
   color: #fff;
@@ -169,22 +311,9 @@ footer {
   color: #fff;
 }
 
-/* Contact Info */
-.contact-info {
-  margin-bottom: 25px;
-}
-
-.contact-info p {
-  margin-bottom: 10px;
-}
-
-/* Map */
-.map iframe {
-  border-radius: 8px;
-  margin-top: 15px;
-}
-
-/* Call Now Button (Mobile Sticky) */
+/* ============================
+   Sticky Call Button
+   ============================ */
 .call-now-btn {
   display: none;
   position: fixed;
@@ -205,7 +334,9 @@ footer {
   color: #fff;
 }
 
-/* Responsive Header */
+/* ============================
+   Responsive Fixes
+   ============================ */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -213,9 +344,6 @@ footer {
   cursor: pointer;
 }
 
-/* ============================
-   Responsive Fixes
-   ============================ */
 @media (max-width: 1024px) {
   .hero img {
     height: 350px;
@@ -242,10 +370,6 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
   }
 
-  .nav-links a:first-child {
-    border-top: none;
-  }
-
   .nav-links.active {
     display: flex;
   }
@@ -266,27 +390,30 @@ footer {
     font-size: 1rem;
   }
 
-  .service-block img,
-  .project-block img {
-    height: 200px;
-  }
-
-  .service-block h3,
-  .project-block h3 {
-    font-size: 1.2rem;
-  }
-
-  .service-block p,
-  .project-block p {
-    font-size: 0.95rem;
-  }
-
   .logo img {
     height: 36px;
   }
 
   .call-now-btn {
     display: block;
+  }
+
+  /* About, Services, Projects, Contact responsive */
+  .about-section,
+  .service-section,
+  .service-section.reverse,
+  .project-section,
+  .project-section.reverse,
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-section img,
+  .service-section img,
+  .project-section img,
+  .contact-section img {
+    max-width: 100%;
   }
 }
 
