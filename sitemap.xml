@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://nithindevelopers.com/</loc></url>
-  <url><loc>https://nithindevelopers.com/about.html</loc></url>
-  <url><loc>https://nithindevelopers.com/services.html</loc></url>
-  <url><loc>https://nithindevelopers.com/projects.html</loc></url>
-  <url><loc>https://nithindevelopers.com/contact.html</loc></url>
+
+  <url>
+    <loc>https://www.nithindevelopers.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.nithindevelopers.com/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.nithindevelopers.com/services.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.nithindevelopers.com/projects.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.nithindevelopers.com/contact.html</loc>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
