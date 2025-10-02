@@ -125,12 +125,18 @@ ul, ol {
   margin: 10px 0 20px 20px;
 }
 
-.content img {
-  max-width: 100%;
+/* Global responsive images */
+.content img,
+.service-section img,
+.project-section img,
+.about-section img {
+  width: 100%;
   height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
   display: block;
   margin: 20px auto;
-  border-radius: 8px;
 }
 
 /* ============================
@@ -144,19 +150,8 @@ ul, ol {
   margin: 40px 0;
 }
 
-.about-section img {
-  flex: 1;
-  max-width: 45%;
-  border-radius: 8px;
-}
-
 .about-section .about-text {
   flex: 1;
-}
-
-.about-section .about-text h2 {
-  color: #0d1b2a;
-  margin-bottom: 10px;
 }
 
 /* ============================
@@ -170,20 +165,8 @@ ul, ol {
   margin: 50px 0;
 }
 
-.service-section img {
-  flex: 1;
-  max-width: 45%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
 .service-section .service-text {
   flex: 1;
-}
-
-.service-section .service-text h3 {
-  color: #0d1b2a;
-  margin-bottom: 10px;
 }
 
 .service-section.reverse {
@@ -201,20 +184,8 @@ ul, ol {
   margin: 50px 0;
 }
 
-.project-section img {
-  flex: 1;
-  max-width: 45%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
 .project-section .project-text {
   flex: 1;
-}
-
-.project-section .project-text h3 {
-  color: #0d1b2a;
-  margin-bottom: 10px;
 }
 
 .project-section.reverse {
@@ -237,25 +208,9 @@ ul, ol {
   flex: 1;
 }
 
-.contact-details h3,
-.contact-form h3 {
-  color: #0d1b2a;
-  margin-bottom: 15px;
-}
-
-.contact-details p {
-  margin-bottom: 10px;
-}
-
 .contact-form form {
   display: flex;
   flex-direction: column;
-}
-
-.contact-form label {
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 5px;
 }
 
 .contact-form input,
@@ -264,10 +219,11 @@ ul, ol {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
+  margin-bottom: 12px;
 }
 
 .contact-form button {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 /* ============================
@@ -398,12 +354,10 @@ footer {
     display: block;
   }
 
-  /* About, Services, Projects, Contact responsive */
+  /* Stack About, Services, Projects, Contact vertically */
   .about-section,
   .service-section,
-  .service-section.reverse,
   .project-section,
-  .project-section.reverse,
   .contact-section {
     flex-direction: column;
     text-align: center;
@@ -417,21 +371,22 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
-  .content {
-    padding: 0 15px;
+@media (max-width: 480px) {
+  .hero img {
+    height: 180px; /* shorter banner */
   }
 
-  .btn-quote {
-    display: block;
-    margin: 10px auto;
-    width: 90%;
-    text-align: center;
+  .hero-text h1 {
+    font-size: 1.3rem;
   }
 
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .service-section img,
+  .project-section img,
+  .about-section img {
+    max-height: 220px;
   }
 }
