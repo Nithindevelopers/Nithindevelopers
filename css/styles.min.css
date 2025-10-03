@@ -8,11 +8,15 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* ✅ stop sideways scroll */
+}
+
 body {
   background: #fdfdfd;
   color: #333;
   line-height: 1.6;
-  overflow-x: hidden; /* prevent sideways scrolling */
 }
 
 /* ============================
@@ -111,6 +115,7 @@ body {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
+  word-wrap: break-word; /* ✅ break long text */
 }
 
 .content h2 {
@@ -127,17 +132,19 @@ ul, ol {
   margin: 10px 0 20px 20px;
 }
 
-/* Global images - controlled size for desktop */
-.content img,
+/* Global images */
+img {
+  max-width: 100%; /* ✅ always fit */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Section images (desktop control) */
 .service-section img,
 .project-section img,
 .about-section img {
-  width: 100%;
-  max-width: 500px;   /* ✅ prevents expansion on desktop */
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
+  max-width: 500px;   /* ✅ prevents oversize on desktop */
   margin: 20px auto;
 }
 
@@ -148,13 +155,13 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px; /* ✅ spacing between text and image */
+  gap: 40px;
   margin: 50px 0;
 }
 
 .about-section .about-text {
   flex: 1;
-  padding: 10px; /* ✅ add breathing space */
+  padding: 10px;
 }
 
 /* ============================
@@ -164,7 +171,7 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px; /* ✅ spacing between text and image */
+  gap: 40px;
   margin: 60px 0;
 }
 
@@ -184,7 +191,7 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px; /* ✅ spacing between text and image */
+  gap: 40px;
   margin: 60px 0;
 }
 
@@ -360,7 +367,7 @@ footer {
     display: block;
   }
 
-  /* Stack About, Services, Projects, Contact vertically */
+  /* Stack sections vertically on mobile */
   .about-section,
   .service-section,
   .project-section,
@@ -375,8 +382,8 @@ footer {
   .contact-details,
   .contact-form {
     width: 100%;
-    text-align: center; /* ✅ center text only on mobile */
-    padding: 0 10px;
+    text-align: center;
+    padding: 0 15px; /* ✅ more padding */
     box-sizing: border-box;
   }
 
@@ -390,7 +397,7 @@ footer {
 
 @media (max-width: 480px) {
   .hero img {
-    height: 180px; /* shorter banner */
+    height: 180px;
   }
 
   .hero-text h1 {
