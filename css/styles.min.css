@@ -10,7 +10,7 @@
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden; /* ✅ stop sideways scroll */
+  overflow-x: hidden; /* ✅ prevent sideways scroll */
 }
 
 body {
@@ -115,7 +115,7 @@ body {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
-  word-wrap: break-word; /* ✅ break long text */
+  word-wrap: break-word;
 }
 
 .content h2 {
@@ -134,93 +134,53 @@ ul, ol {
 
 /* Global images */
 img {
-  max-width: 100%; /* ✅ always fit */
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 8px;
 }
 
 /* Section images (desktop control) */
+.about-section img,
 .service-section img,
 .project-section img,
-.about-section img {
+.contact-section img {
   max-width: 500px;   /* ✅ prevents oversize on desktop */
   margin: 20px auto;
 }
 
 /* ============================
-   About Section
+   Sections (Desktop)
    ============================ */
-.about-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  margin: 50px 0;
-}
-
-.about-section .about-text {
-  flex: 1;
-  padding: 10px;
-}
-
-/* ============================
-   Services Section
-   ============================ */
-.service-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  margin: 60px 0;
-}
-
-.service-section .service-text {
-  flex: 1;
-  padding: 10px;
-}
-
-.service-section.reverse {
-  flex-direction: row-reverse;
-}
-
-/* ============================
-   Projects Section
-   ============================ */
-.project-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  margin: 60px 0;
-}
-
-.project-section .project-text {
-  flex: 1;
-  padding: 10px;
-}
-
-.project-section.reverse {
-  flex-direction: row-reverse;
-}
-
-/* ============================
-   Contact Section
-   ============================ */
+.about-section,
+.service-section,
+.project-section,
 .contact-section {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 40px;
-  margin: 50px 0;
+  margin: 60px 0;
 }
 
-.contact-details, 
+.about-text,
+.service-text,
+.project-text,
+.contact-details,
 .contact-form {
   flex: 1;
   padding: 10px;
 }
 
+/* Alternating layout */
+.service-section.reverse,
+.project-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ============================
+   Contact Form
+   ============================ */
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -283,11 +243,17 @@ footer {
 /* ============================
    Sticky Call Button
    ============================ */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,183,3, 0.7); }
+  50% { transform: scale(1.08); box-shadow: 0 0 15px rgba(255,183,3, 0.8); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,183,3, 0.7); }
+}
+
 .call-now-btn {
-  display: none;
+  display: block;   /* ✅ always visible */
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 25px;
+  right: 25px;
   background: #ffb703;
   color: #0d1b2a;
   padding: 12px 18px;
@@ -295,12 +261,14 @@ footer {
   text-decoration: none;
   font-weight: bold;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: pulse 2s infinite;
 }
 
 .call-now-btn:hover {
   background: #fb8500;
   color: #fff;
+  animation: none; /* ✅ stop pulsing on hover */
+  transform: scale(1.05);
 }
 
 /* ============================
@@ -363,17 +331,19 @@ footer {
     height: 36px;
   }
 
-  .call-now-btn {
-    display: block;
-  }
-
-  /* Stack sections vertically on mobile */
+  /* ✅ Stack all sections on mobile */
   .about-section,
   .service-section,
   .project-section,
   .contact-section {
-    flex-direction: column;
+    flex-direction: column !important;
+    align-items: center;
     text-align: center;
+  }
+
+  .service-section.reverse,
+  .project-section.reverse {
+    flex-direction: column !important; /* override reverse */
   }
 
   .about-text,
@@ -383,7 +353,7 @@ footer {
   .contact-form {
     width: 100%;
     text-align: center;
-    padding: 0 15px; /* ✅ more padding */
+    padding: 0 15px;
     box-sizing: border-box;
   }
 
@@ -412,5 +382,11 @@ footer {
   .project-section img,
   .about-section img {
     max-height: 220px;
+  }
+
+  /* ✅ Mobile-specific call button stays lower */
+  .call-now-btn {
+    bottom: 15px;
+    right: 15px;
   }
 }
