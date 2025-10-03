@@ -145,7 +145,7 @@ img {
 .service-section img,
 .project-section img,
 .contact-section img {
-  max-width: 500px;   /* ✅ prevents oversize on desktop */
+  max-width: 500px;
   margin: 20px auto;
 }
 
@@ -172,7 +172,6 @@ img {
   padding: 10px;
 }
 
-/* Alternating layout */
 .service-section.reverse,
 .project-section.reverse {
   flex-direction: row-reverse;
@@ -250,7 +249,7 @@ footer {
 }
 
 .call-now-btn {
-  display: block;   /* ✅ always visible */
+  display: block;
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -267,7 +266,7 @@ footer {
 .call-now-btn:hover {
   background: #fb8500;
   color: #fff;
-  animation: none; /* ✅ stop pulsing on hover */
+  animation: none;
   transform: scale(1.05);
 }
 
@@ -343,7 +342,7 @@ footer {
 
   .service-section.reverse,
   .project-section.reverse {
-    flex-direction: column !important; /* override reverse */
+    flex-direction: column !important;
   }
 
   .about-text,
@@ -384,7 +383,6 @@ footer {
     max-height: 220px;
   }
 
-  /* ✅ Mobile-specific call button stays lower */
   .call-now-btn {
     bottom: 15px;
     right: 15px;
